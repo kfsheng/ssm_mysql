@@ -40,5 +40,12 @@ public class PersonServiceImpl implements IPersonService
 	{
 		return personDao.getPerson(personId);
 	}
+
+	@Override
+	@Transactional(timeout=1000, isolation=Isolation.DEFAULT, propagation=Propagation.REQUIRED)		// 设置事务超时时间、隔离级别、传播行为
+	public int savePerson(Person person)
+	{
+		return personDao.savePerson(person);
+	}
 	
 }

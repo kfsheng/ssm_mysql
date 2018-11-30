@@ -22,4 +22,6 @@ public interface IPersonService {
 	Person getPerson(int personId);
 	
 	boolean updatePerson(Person person);
+
+	int savePerson(Person person);
 }
